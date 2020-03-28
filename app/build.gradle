@@ -27,5 +27,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 //    compile group: 'org.aspectj', name: 'aspectjrt', version: '1.9.2'
-    implementation 'org.aspectj:aspectjrt:1.8.9'
+    implementation 'org.aspectj:aspectjrt:1.8.+'
 }

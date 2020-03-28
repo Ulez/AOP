@@ -20,6 +20,17 @@ public class PerformanceAop {
         }
         Log.e("time_cost", signature.toShortString()+" cost:" + (System.currentTimeMillis() - start));
     }
+    @Around("call(* fun.learnlife.myapplication.MainActivity.**(..))")
+    public void getTime2(ProceedingJoinPoint joinPoint) {
+        Signature signature=joinPoint.getSignature();
+        long start = System.currentTimeMillis();
+        try {
+            joinPoint.proceed();
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+        Log.e("time_cost", signature.toShortString()+" cost2:" + (System.currentTimeMillis() - start));
+    }
 //    @Around("call(* fun.learnlife.myapplication.MainActivity.**(..))")
 //    public void getTime(ProceedingJoinPoint joinPoint) {
 //        Signature signature=joinPoint.getSignature();
